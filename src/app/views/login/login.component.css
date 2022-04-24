@@ -2,17 +2,27 @@ body{
     background-image: url('../img/background-login.jpg');
     background-size: cover;
 
-    
-    
 }
+
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+}
+  
+.example-full-width {
+    width: 100%;
+}
+
 h1{
     text-align: center;
     padding-left: auto;
     padding-right: auto;
     padding-top: 50px;
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 50px;
-    padding-bottom: 20px;
+    font-size: 110px;
+    padding-top: 100px;
+    padding-bottom: 15%;
     color: green;
 }
 
@@ -25,12 +35,24 @@ h2{
 
 #login-container{
     background-color: rgb(253, 253, 253);
-    width: 450px;
+    width: 25%;
     margin-left: auto;
     margin-right: auto;
     padding: 30px 40px;
     border-radius: 10px;
     text-align: center;
+}
+
+.btn-Entrar{
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    background-color: rgb(95, 145, 95);   
+    color: white; 
+}
+
+.login-mensagem{
+    color: brown;
 }
 
 input, a, label{

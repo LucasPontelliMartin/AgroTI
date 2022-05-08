@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
     let senha = this.searchModel.Senha;
     let dados: any;
 
-    this._authentication.getLogin(user,senha).subscribe(r => {
+    this._authentication.getLogin('Cliente/Login', user, senha).subscribe(r => {
       console.log(r);
       this.mensagem = r.message;
       console.log(this.mensagem);

@@ -14,12 +14,19 @@ import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthenticationService } from './shared/service/authentication.service';
 import {MatMenuModule} from '@angular/material/menu';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { UsuarioComponent } from './views/usuario/usuario.component';
+import { PerfilComponent } from './views/perfil/perfil.component';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    LoginComponent
+    LoginComponent,
+    UsuarioComponent,
+    PerfilComponent
   ],
   imports: [
     HttpClientModule,
@@ -31,7 +38,8 @@ import {MatMenuModule} from '@angular/material/menu';
     MatButtonModule,
     MatInputModule,
     FormsModule,
-    MatMenuModule
+    MatMenuModule,
+    MatSidenavModule
   ],
   providers: [],
   bootstrap: [AppComponent]

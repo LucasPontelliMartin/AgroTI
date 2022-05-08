@@ -1,0 +1,23 @@
+<button mat-button color="primary" class="btn-Entrar pt-2 pb-2" (click)="cadastrar()">Teste</button>
+
+
+
+
+<table mat-table id="tbNegociacao" class="mat-elevation-z8 demo-table tabela" *ngIf="(perfil || []).length > 0">
+    <thead>
+        <tr>
+            <th>Nome</th>
+            <th>Usuário</th>
+            <th>E-mail</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of usuarios">
+            <td class="align-center">{{user.nome}}</td>
+            <td class="align-center">{{user.usuario}}</td>
+            <td class="align-center">{{user.email}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<label *ngIf="(perfil || []).length == 0">Nenhum Perfil Encontrado...</label>

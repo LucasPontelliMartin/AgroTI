@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'UI';
+  exibeMenu = false;
+
+  exibirMenu(){
+    this.exibeMenu = !this.exibeMenu;
+    console.log("Exibe Menu = ", this.exibeMenu);
+  }
 }

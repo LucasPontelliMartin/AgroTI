@@ -17,7 +17,10 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import { UsuarioComponent } from './views/usuario/usuario.component';
 import { PerfilComponent } from './views/perfil/perfil.component';
-
+import { MapaComponent } from './views/mapa/mapa.component';
+import { AgmCoreModule } from '@agm/core';
+import {MatDialogModule} from '@angular/material/dialog';
+import { UsuarioModalComponent } from './views/usuario/modal/usuario.modal.component';
 
 
 @NgModule({
@@ -26,7 +29,9 @@ import { PerfilComponent } from './views/perfil/perfil.component';
     DashboardComponent,
     LoginComponent,
     UsuarioComponent,
-    PerfilComponent
+    PerfilComponent,
+    MapaComponent,
+    UsuarioModalComponent
   ],
   imports: [
     HttpClientModule,
@@ -39,7 +44,11 @@ import { PerfilComponent } from './views/perfil/perfil.component';
     MatInputModule,
     FormsModule,
     MatMenuModule,
-    MatSidenavModule
+    MatSidenavModule,
+    MatDialogModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyD2NVuqxeoa7ql7S55IyYtkqfqaPapVArE&callback=initMap&v=weekly'
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]

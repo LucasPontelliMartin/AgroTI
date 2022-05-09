@@ -18,4 +18,17 @@ export class DashboardComponent implements OnInit {
 
   }
 
+  cadastrarPerfil(){
+    this.router.navigate(['/perfil']);
+
+  }
+
+  log(){
+
+  }
+  
+  mapa(){
+    this.router.navigate(['/mapa']);
+
+  }
 }

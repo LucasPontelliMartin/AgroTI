@@ -1,25 +1,35 @@
-<body>
-    <h1>AgroTI</h1>
-    <div id="login-container">
-        <h2>Login</h2>
-        <form class="col-md-12" (submit)="acessar()">
+<div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form class="login100-form" (submit)="acessar()">
 
-            <mat-form-field class="example-full-width">
-                <mat-label>Digite seu Usuário</mat-label>
-                <input type="text" matInput placeholder="Usuário" [(ngModel)]="searchModel.Usuario" name="Usuario" required="true">
-            </mat-form-field>
+                <span class="login100-form-title p-b-34 p-t-27">
+                    Agro Ti
+                </span>
 
-            <mat-form-field class="example-full-width">
-                <mat-label>Digite sua Senha</mat-label>
-                <input matInput type="password" class="row" id="Senha" [(ngModel)]="searchModel.Senha" placeholder="Senha" name="Senha" required="true">
-            </mat-form-field>
+                <div class="wrap-input100 validate-input" data-validate = "Escreva usuario">
+                    <input type="text" matInput placeholder="Usuário" [(ngModel)]="searchModel.Usuario" name="Usuario" required="true">
+                </div>
 
-            <label *ngIf="mensagem" class="login-mensagem" [innerHtml]="mensagem"></label>
+                <div class="wrap-input100 validate-input" data-validate="Escreva senha">
+                    <input matInput type="password" class="row" id="Senha" [(ngModel)]="searchModel.Senha" placeholder="Senha" name="Senha" required="true">
+                </div>
 
-            <button mat-button color="primary" class="btn-Entrar pt-2 pb-2" type="submit">Entrar</button>
+                <div class="container-login100-form-btn">
+                    <button mat-button color="primary" class="btn-Entrar pt-2 pb-2" type="submit">Entrar</button>
+                </div>
 
-            <a href="#" class="row">Esqueceu sua senha?</a>
-        </form>
+                <div class="text-center p-t-90">
+                    <a class="txt1" href="#">
+                        Esqeuceu a senha?
+                    </a>
+                </div>
+
+                <label *ngIf="mensagem" class="login-mensagem" [innerHtml]="mensagem"></label>
+
+            </form>
+        </div>
     </div>
+</div>
 
-</body>
+<div id="dropDownSelect1"></div>

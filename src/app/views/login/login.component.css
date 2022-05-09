@@ -1,46 +1,155 @@
-body{
-    background-image: url('../img/background-login.jpg');
-    background-size: cover;
 
+.limiter {
+    width: 100%;
+    margin: 0 auto;
+}
+  
+.container-login100 {
+    width: 100%;  
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../img/bg-01.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 1;  
 }
 
-.example-form {
-    min-width: 150px;
-    max-width: 500px;
+.container-login100::before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255,255,255,0.5);
+}
+
+.wrap-login100 {
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    padding: 55px 55px 37px 55px;
+  
+    box-shadow: 10px 10px 10px rgba(105, 105, 105, 0.4);
+    background: #01642C;
+    background: -webkit-linear-gradient(top, #009F44, #01642C);
+    background: -o-linear-gradient(top, #009F44, #01642C);
+    background: -moz-linear-gradient(top, #009F44, #01642C);
+    background: linear-gradient(top, #009F44, #01642C);
+  }
+
+.login100-form {
     width: 100%;
 }
   
-.example-full-width {
+.login100-form-logo {
+    font-size: 60px; 
+    color: #333333;
+  
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin: 0 auto;
+    background-image: url('../img/AgroTi.png');
+    
+}
+
+
+.login100-form-title {
+    font-family: Poppins-Medium;
+    font-size: 30px;
+    color: #fff;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+  
+    display: block;
+}
+
+wrap-input100 {
     width: 100%;
+    position: relative;
+    border-bottom: 2px solid rgba(255,255,255,0.24);
+    margin-bottom: 30px;
+  }
+  
+  .input100 {
+    font-family: Poppins-Regular;
+    font-size: 16px;
+    color: #fff;
+    line-height: 1.2;
+  
+    display: block;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    padding: 0 5px 0 38px;
+  }
+  
+  /*---------------------------------------------*/ 
+  .focus-input100 {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+  }
+  
+  .focus-input100::before {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+  
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+  
+    background: #fff;
+  }
+  
+  
+input, a, label{
+    display: block;
+    width: 100%;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-h1{
-    text-align: center;
-    padding-left: auto;
-    padding-right: auto;
-    padding-top: 50px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-size: 110px;
-    padding-top: 100px;
-    padding-bottom: 15%;
-    color: green;
-}
-
-h2{
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 40px;
-    color: green;
-}
-
-#login-container{
-    background-color: rgb(253, 253, 253);
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 30px 40px;
-    border-radius: 10px;
-    text-align: center;
+.container-login100-form-btn {
+    width: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .btn-Entrar{
@@ -52,12 +161,7 @@ h2{
 }
 
 .login-mensagem{
-    color: brown;
+    color: rgb(211, 211, 211);
 }
 
-input, a, label{
-    display: block;
-    width: 100%;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
-}
+  

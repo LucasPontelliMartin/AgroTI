@@ -1,0 +1,21 @@
+<div class="limiter">
+    <div class="container-menu">
+        <div class="container-button">
+            <button mat-button color="primary" class="btn-Entrar pt-2 pb-2" (click)="cadastrar()">Cadastro de Usuários</button>
+            <button mat-button color="primary" class="btn-Entrar pt-2 pb-2" (click)="cadastrarPerfil()">Cadastro de Perfis</button>
+            <button mat-button color="primary" class="btn-Entrar pt-2 pb-2" (click)="dashboard()">Visualizar Dashboard</button>
+        </div>
+
+
+        <h2>Visualização dos Terrenos</h2>
+        <div class="visualizar-mapa">
+            <agm-map [latitude]="lat" [longitude]="lng">
+                <agm-polygon [paths]="poligonos"></agm-polygon>     
+            </agm-map>
+        </div>
+        
+    </div>
+</div>
+<!-- this creates a google map on the page with the given lat/lng from -->
+<!-- the component as the initial center of the map: -->
+    

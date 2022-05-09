@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { AuthenticationService } from 'src/app/shared/service/authentication.service';
+import { UsuarioModalComponent } from './modal/usuario.modal.component';
 
 @Component({
   selector: 'app-usuario',
@@ -13,7 +15,7 @@ export class UsuarioComponent implements OnInit {
   searchModel: any = { Usuario: '', Senha: '' }
   mensagem = null;
 
-  constructor(private _authentication : AuthenticationService, private router: Router) { }
+  constructor(private _authentication : AuthenticationService, private router: Router, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.buscaUsuario();
@@ -24,8 +26,17 @@ export class UsuarioComponent implements OnInit {
 
   }
 
-  perfil(){
+  cadastrarPerfil(){
     this.router.navigate(['/perfil']);
+
+  }
+
+  log(){
+
+  }
+  
+  mapa(){
+    this.router.navigate(['/mapa']);
 
   }
 
@@ -37,6 +48,15 @@ export class UsuarioComponent implements OnInit {
       if(r.isSuccess){
         this.usuarios = r.data;
       }
+    });
+  }
+
+  addUsuario(): void {
+    const dialogRef = this.dialog.open(UsuarioModalComponent, {
+      width: '450px'
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
     });
   }
 

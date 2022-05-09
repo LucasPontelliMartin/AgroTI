@@ -1,24 +1,45 @@
-<button mat-button color="primary" class="btn-Entrar pt-2 pb-2" (click)="cadastrar()">Teste</button>
-<button mat-button color="primary" class="btn-Entrar pt-2 pb-2" (click)="perfil()">Perfil</button>
+<div class="limiter">
+    <div class="container-menu">
+        <div class="container-button">
+            <button mat-button color="primary" class="btn-Entrar pt-2 pb-2" (click)="cadastrar()">Cadastro de Usuários</button>
+            <button mat-button color="primary" class="btn-Entrar pt-2 pb-2" (click)="cadastrarPerfil()">Cadastro de Perfis</button>
+            <button mat-button color="primary" class="btn-Entrar pt-2 pb-2" (click)="log()">Visualizar Log de Ativdades</button>
+            <button mat-button color="primary" class="btn-Entrar pt-2 pb-2" (click)="mapa()">Exibir Mapa</button>
+        </div>
 
 
 
+        <button mat-button color="primary" class="btn pt-2 pb-2" (click)="addUsuario()"><mat-icon>add</mat-icon> Usuário</button>
 
-<table mat-table id="tbNegociacao" class="mat-elevation-z8 demo-table tabela" *ngIf="(usuarios || []).length > 0">
-    <thead>
-        <tr>
-            <th>Nome</th>
-            <th>Usuário</th>
-            <th>E-mail</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let user of usuarios">
-            <td class="align-center">{{user.nome}}</td>
-            <td class="align-center">{{user.usuario}}</td>
-            <td class="align-center">{{user.email}}</td>
-        </tr>
-    </tbody>
-</table>
+        <table mat-table id="tbNegociacao" class="mat-elevation-z8 demo-table tabela" *ngIf="(usuarios || []).length > 0">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Usuário</th>
+                    <th>E-mail</th>
+                    <th>Ativo</th>
+                    <th></th>
 
-<label *ngIf="(usuarios || []).length == 0">Nenhum Usuário Encontrado...</label>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of usuarios">
+                    <td class="align-center">{{user.nome}}</td>
+                    <td class="align-center">{{user.usuario}}</td>
+                    <td class="align-center">{{user.email}}</td>
+                    <td class="align-center">{{user.Ativo == true? 'Sim' : 'Não'}}</td>
+                    <td class="align-center">
+                        <button mat-button color="success" class="btn-Entrar pt-2 pb-2" (click)="editar()">Editar</button>
+                        <button mat-button color="warn" class="btn-Entrar pt-2 pb-2" (click)="deletar()">Deletar</button>
+
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+        
+        <label *ngIf="(usuarios || []).length == 0">Nenhum Usuário Encontrado...</label>
+
+    </div>
+</div>
+

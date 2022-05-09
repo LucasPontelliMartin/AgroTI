@@ -18,7 +18,6 @@ export class LoginComponent implements OnInit {
 
   acessar(){
     this.mensagem = null;
-
         if (this.searchModel.Usuario == '' || this.searchModel.Senha == '') {
             this.mensagem = 'InformeUsuarioSenha';
             return;

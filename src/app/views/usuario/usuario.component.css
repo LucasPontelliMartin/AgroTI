@@ -57,3 +57,10 @@
 .container-button{
     margin-top: 50px;
 }
+
+.btnAdd{
+  align-content: revert;
+  position: fixed;
+  margin-top: 150px;
+  margin-left: 70%;
+}

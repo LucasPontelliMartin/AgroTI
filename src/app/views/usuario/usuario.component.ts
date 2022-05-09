@@ -57,7 +57,15 @@ export class UsuarioComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
+      this.buscaUsuario();
     });
   }
+
+deletar(usuario = null){
+  this._authentication.delete('cliente/', usuario._id).subscribe(r => {
+    console.log(r);
+    this.mensagem = r.message;
+  });
+}
 
 }

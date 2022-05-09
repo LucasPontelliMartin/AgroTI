@@ -21,6 +21,7 @@ import { MapaComponent } from './views/mapa/mapa.component';
 import { AgmCoreModule } from '@agm/core';
 import {MatDialogModule} from '@angular/material/dialog';
 import { UsuarioModalComponent } from './views/usuario/modal/usuario.modal.component';
+import { PerfilModalComponent } from './views/perfil/modal/perfil.modal.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { UsuarioModalComponent } from './views/usuario/modal/usuario.modal.compo
     UsuarioComponent,
     PerfilComponent,
     MapaComponent,
-    UsuarioModalComponent
+    UsuarioModalComponent,
+    PerfilModalComponent
   ],
   imports: [
     HttpClientModule,

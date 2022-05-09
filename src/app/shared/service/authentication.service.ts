@@ -1,4 +1,4 @@
-import { HttpClient, HttpClientModule, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 
@@ -16,6 +16,8 @@ export class AuthenticationService {
     })
   };
 
+    params =  new HttpParams();
+
   constructor(private httpClient: HttpClient) { }
 
   public getLogin(url = null, usuario: string, senha: string): Observable<any> {
@@ -27,7 +29,12 @@ export class AuthenticationService {
   }
 
   public post(url = null, model: any = {}): Observable<any> {
-    return this.httpClient.post(this.apiUrl + url, this.httpOptions, model);
+    return this.httpClient.post(this.apiUrl + url, model, this.httpOptions);
+  }
+
+  public delete(url = null, id = null): Observable<any> {
+    this.params = this.params.set('id', id);
+    return this.httpClient.delete(this.apiUrl + url, this.httpOptions  );
   }
 
 }

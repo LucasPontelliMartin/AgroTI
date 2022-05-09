@@ -1,12 +1,33 @@
-<h1 mat-dialog-title>Hi {{data.name}}</h1>
-<div mat-dialog-content>
-  <p>What's your favorite animal?</p>
-  <mat-form-field appearance="fill">
-    <mat-label>Favorite Animal</mat-label>
-    <input matInput [(ngModel)]="data.animal">
-  </mat-form-field>
-</div>
-<div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button [mat-dialog-close]="data.animal" cdkFocusInitial>Ok</button>
-</div>
+<h1 mat-dialog-title>Novo Usuário</h1>
+
+<form class="login100-form" (submit)="salvar()">
+
+  <input type="text" matInput placeholder="NomeCompleto" [(ngModel)]="searchModel.nome" name="Nome" required="true">
+  <br/>
+  <br/>
+
+  <input type="date" matInput placeholder="dataNascimento" [(ngModel)]="searchModel.dataNascimento" name="dataNascimento" required="true">
+  <br/>
+  <br/>
+
+  <input type="text" matInput placeholder="Email" [(ngModel)]="searchModel.email" name="Email" required="true">
+  <br/>
+  <br/>
+
+  <input type="text" matInput placeholder="Usuário" [(ngModel)]="searchModel.usuario" name="Usuario" required="true">
+  <br/>
+  <br/>
+
+  <input matInput type="password" class="row" id="Senha" [(ngModel)]="searchModel.senha" placeholder="Senha" name="Senha" required="true">
+  <br/>
+  <br/>
+
+  <label *ngIf="mensagem" class="login-mensagem" [innerHtml]="mensagem"></label>
+
+  <div mat-dialog-actions>
+    <button mat-button (click)="fechar()">Fechar</button>
+    <button mat-button type="submit">Salvar</button>
+  </div>
+
+</form>
+

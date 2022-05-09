@@ -12,7 +12,7 @@ import { PerfilModalComponent } from './modal/perfil.modal.component';
 })
 export class PerfilComponent implements OnInit {
 
-  perfil: any = null;
+  perfil: any = [];
   searchModel: any = { Usuario: '', Senha: '' }
   mensagem = null;
 

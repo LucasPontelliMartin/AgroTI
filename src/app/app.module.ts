@@ -49,7 +49,7 @@ import { PerfilModalComponent } from './views/perfil/modal/perfil.modal.componen
     MatSidenavModule,
     MatDialogModule,
     AgmCoreModule.forRoot({
-      apiKey: 'AIzaSyD2NVuqxeoa7ql7S55IyYtkqfqaPapVArE&callback=initMap&v=weekly'
+      apiKey: 'AIzaSyD2NVuqxeoa7ql7S55IyYtkqfqaPapVArE'
     })
   ],
   providers: [],

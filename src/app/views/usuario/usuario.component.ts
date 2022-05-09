@@ -11,7 +11,7 @@ import { UsuarioModalComponent } from './modal/usuario.modal.component';
 })
 export class UsuarioComponent implements OnInit {
 
-  usuarios: any = null;
+  usuarios: any = [];
   searchModel: any = { Usuario: '', Senha: '' }
   mensagem = null;
 
